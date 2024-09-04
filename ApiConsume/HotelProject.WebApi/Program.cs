@@ -28,6 +28,8 @@ builder.Services.AddScoped<IRoomService, RoomManager>();
 builder.Services.AddScoped<IServicesDal, EfServiceDal>();
 builder.Services.AddScoped<IServiceService, ServiceManager>();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 
 builder.Services.AddCors(opt =>
 {
