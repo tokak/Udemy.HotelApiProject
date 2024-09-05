@@ -22,7 +22,7 @@ namespace HotelProject.WebApi.Controllers
             var values = _serviceService.TGetList();
             return Ok(values);
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteService(int id)
         {
             var values = _serviceService.TGetByID(id);
