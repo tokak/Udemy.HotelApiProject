@@ -28,6 +28,9 @@ builder.Services.AddScoped<IRoomService, RoomManager>();
 builder.Services.AddScoped<IServicesDal, EfServiceDal>();
 builder.Services.AddScoped<IServiceService, ServiceManager>();
 
+builder.Services.AddScoped<IAboutDal, EfAboutDal>();
+builder.Services.AddScoped<IAboutService, AboutManager>();
+
 builder.Services.AddAutoMapper(typeof(Program));
 
 
