@@ -11,11 +11,7 @@
         @await Component.InvokeAsync("_SpinnerPartial")
         @await Component.InvokeAsync("_NavbarPartial")
         @await Component.InvokeAsync("_BookingCoverPartial")
-        @await Component.InvokeAsync("_ReservationPartial")
-
-
         @await Html.PartialAsync("/Views/Booking/AddBooking.cshtml")
-
         @* @await Component.InvokeAsync("_SubscribePartial") *@
         @await Html.PartialAsync("/Views/Default/_SubscribePartial.cshtml")
         @await Component.InvokeAsync("_FooterPartial")
