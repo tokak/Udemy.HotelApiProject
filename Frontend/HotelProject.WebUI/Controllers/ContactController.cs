@@ -30,7 +30,7 @@ namespace HotelProject.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> SendMessage(CreateContactDto createContactDto)
         {
-            createContactDto.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+            createContactDto.Date = DateTime.Now;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createContactDto);
             // JSON verisini HTTP isteğiyle gönderilecek içerik olarak hazırlar.

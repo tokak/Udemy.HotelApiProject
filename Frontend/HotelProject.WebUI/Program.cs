@@ -1,9 +1,10 @@
 using HotelProject.EntityLayer.Concrete;
 using HotelProject.DataAccessLayer.Concrete;
-using FluentValidation.AspNetCore;
+
 using FluentValidation;
 using HotelProject.WebUI.Dtos.GuestDto;
 using HotelProject.WebUI.ValidationRules.GuestValidationRules;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
