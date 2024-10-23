@@ -5,7 +5,16 @@
     </a>
     <a href="/AdminContact/SendBox/" class="list-group-item border-0 p-r-0">
         <i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Giden Kutusu
-        <span class="badge badge-success badge-sm float-right m-t-5">47</span>
+        @if (ViewBag.sendMessageCount == null)
+        {
+            <span class="badge badge-success badge-sm float-right m-t-5">0</span>
+
+        }
+        else {
+            <span class="badge badge-success badge-sm float-right m-t-5">@ViewBag.sendMessageCount</span>
+
+        }
+      
     </a>
     <a href="#" class="list-group-item border-0 p-r-0">
         <i class="fa fa-star-o font-18 align-middle mr-2"></i>Önemli
