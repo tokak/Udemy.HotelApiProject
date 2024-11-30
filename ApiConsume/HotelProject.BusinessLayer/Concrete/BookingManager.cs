@@ -18,9 +18,14 @@ namespace HotelProject.BusinessLayer.Concrete
             _bookingDal = bookingDal;
         }
 
-        public void BookingStatusChangeApproved(int id)
+        public void TBookingStatusChangeApproved(int id)
         {
             _bookingDal.BookingStatusChangeApproved(id);
+        }
+
+        public int TGetBookingCount()
+        {
+            return  _bookingDal.GetBookingCount();
         }
 
         public void TDelete(Booking t)
@@ -46,6 +51,11 @@ namespace HotelProject.BusinessLayer.Concrete
         public void TUpdate(Booking t)
         {
             _bookingDal.Update(t);
+        }
+
+        public List<Booking> TLast6Bookings()
+        {
+            return _bookingDal.Last6Bookings();
         }
     }
 }

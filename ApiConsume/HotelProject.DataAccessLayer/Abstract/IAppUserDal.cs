@@ -12,5 +12,7 @@ namespace HotelProject.DataAccessLayer.Abstract
         List<AppUser> UserListWithWorkLocation();
 
         List<AppUser> UserListWithWorkLocations();
+
+        int AppUserCount();
     }
 }
