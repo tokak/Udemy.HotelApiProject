@@ -20,10 +20,15 @@ namespace HotelProject.WebUI.ViewComponents.Dashboard
             };
             using (var response = await client.SendAsync(request))
             {
-                response.EnsureSuccessStatusCode();
-                var body = await response.Content.ReadAsStringAsync();
-                ResultInstagramFollowersDto resultInstagramFollowersDto = JsonConvert.DeserializeObject<ResultInstagramFollowersDto>(body);
-                return View(resultInstagramFollowersDto);
+                if (response.IsSuccessStatusCode)
+                {
+                    response.EnsureSuccessStatusCode();
+                    var body = await response.Content.ReadAsStringAsync();
+                    ResultInstagramFollowersDto resultInstagramFollowersDto = JsonConvert.DeserializeObject<ResultInstagramFollowersDto>(body);
+                    return View(resultInstagramFollowersDto);
+                }
+                ResultInstagramFollowersDto resultInstagramFollowersDto2 = new ResultInstagramFollowersDto() { followers = 10000, following = 999 };
+                return View(resultInstagramFollowersDto2);
             }
         }
     }

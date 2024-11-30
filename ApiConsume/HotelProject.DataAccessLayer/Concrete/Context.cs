@@ -28,4 +28,6 @@ namespace HotelProject.DataAccessLayer.Concrete
         public DbSet<MessageCategory> MessageCategories { get; set; }
         public DbSet<WorkLocation> WorkLocations { get; set; }
     }
+
+
 }
