@@ -1,4 +1,4 @@
-![anasayfa](https://github.com/user-attachments/assets/b58238aa-df3c-45c0-9f6d-71da7774a12d)# Hotelier Api Project 
+# Hotelier Api Project 
 Asp.Net Core Api - Rapid Api ve Api Consume
 
 ## Kullanılan Teknolojiler
